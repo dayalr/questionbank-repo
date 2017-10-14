@@ -1,0 +1,63 @@
+\documentclass[a4paper,final,twoside,12pt]{book}
+\input{modPackages}
+\input{modNewCommands}
+\input{modHeadings}
+\input{modPdfDat}
+%%------------------------------
+%\solutiontrue %for solutions
+\solutionfalse %for question papers
+%%------------------------------
+\input{pageStyle}
+\input{module4}
+%----------------------------------------------
+\graphicspath{{./figures/}}
+%----------------------------------------------
+\begin{document}
+%-----DesignForContentsBeforeChapters-----
+\pagenumbering{Roman}
+\input{frontPage}
+%-------------credits page---------------
+\thispagestyle{empty} %for the blank page
+\vspace*{1.3\linewidth}
+\begin{flushleft}
+\ifsolution
+	\underline{The booklet contains collection of solutions for \thesemester\ exams (\thedepartment\ Engineering) since 2015}\\\vspace {2mm}
+\else
+	\underline{The booklet contains collection of questions papers for \thesemester\ (\thedepartment\ Engineering) since 2015}\\\vspace {2mm}
+	The solutions can be obtained from exam cell\\\vspace {2mm}
+\fi
+Concept \& cover designed by:\\\vspace {2mm}
+Dr. Ram Dayal
+\end{flushleft}
+%%----------------------------------------
+%------------------------------------
+\pagestyle{plain}
+%------------------------------------
+\tableofcontents
+\clearpage
+\pagestyle{plain} %new page stylefrom here
+%%--------Numeric PageNumberingFrom chapter
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\setlength{\parindent}{\pindt pt}
+%--------add chapter files here-------
+%---------------watermark------------
+\newsavebox\mybox
+\savebox\mybox{\tikz[color=G1,opacity=0.7]\node{SPECIMEN COPY};}
+%\savebox\mybox{\tikz[color=red,opacity=0.2]\node{\includegraphics{./logoMUJ}};}
+\newwatermark*[
+  allpages,
+  angle=45,
+  scale=6,
+  xpos=-20,
+  ypos=15
+]{\usebox\mybox}
+%---------------watermark------------
+\ifsolution
+	\input{solutions}
+\else
+	\input{papers15}
+	%\input{papers16}
+\fi
+\input{LastPage}
+\end{document}

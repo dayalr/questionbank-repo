@@ -1,0 +1,58 @@
+\thispagestyle{empty} % Remove page numbering on this page
+\addcontentsline{toc}{chapter}{Front Page}
+\parindent0pt
+%--------------------------------------------
+%	TITLE SECTION
+%--------------------------------------------
+\onehalfspacing
+%\HRulefull{6pt}
+\linethickness{2mm}
+\line(1,0){492}
+\vfill
+	\parbox[t]{1.0\linewidth}{
+		\centering \fontsize{40pt}{40pt}\selectfont % The first argument for fontsize is the font size of the text and the second is the line spacing - you may need to play with these for your particular title
+		\vspace*{0.2cm} % Space between the start of the title and the top of the grey box
+		\hfill \thetitle\\
+		\hfill \thesemester \\
+		\hfill (\thecoursecode)
+%\vspace*{0.7cm} % Space between the end of the title and the bottom of the grey box
+%\HRulefull{1pt}
+\linethickness{0.5mm}
+\line(1,0){492}\\
+{\large\selectfont
+\begin{flushleft} 
+Name\\
+Registration No.\\
+\end{flushleft}
+%\hfill other details
+}
+}
+\vspace{0.2cm}
+%\HRulefull{6pt}
+\linethickness{2mm}
+\line(1,0){492}\\
+\colorbox{\thecolor}{
+	\parbox[t]{1.0\linewidth}{
+		\centering \fontsize{50pt}{60pt}\selectfont % The first argument for fontsize is the font size of the text and the second is the line spacing - you may need to play with these for your particular title
+		\vspace*{1.2cm} % Space between the start of the title and the top of the grey box
+		\hfill \thedepartment \\
+
+		\hfill \includegraphics[width=2.0in]{logoSchool}\\
+		\vspace{30pt}
+		\hfill
+		\includegraphics[width=2.0in]{logoMUJ}
+
+		\vspace*{1.5cm} % Space between the end of the title and the bottom of the grey box
+	}
+}
+%\linethickness{2mm}
+%\put(1.0,0.0){\line(0,1){50}}
+\vfill
+%-----------------------------------------------------
+{\centering \large 
+		\hfill \textcopyright\ \thedepartment\  Engineering Dept.\\
+		\hfill \theuniversity\\
+		\hfill \theyear \\
+		\HRule{1pt}} % Horizontal line, thickness changed here
+\clearpage % Whitespace to the end of the page
+\singlespacing

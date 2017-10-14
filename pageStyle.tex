@@ -1,0 +1,94 @@
+
+%************pagestyling***************
+%\usepackage[charter]{quotchap}
+%\usepackage{quotchap}
+\headsep = 23pt
+\setlength{\parindent}{\pindt pt}
+\setlength{\parskip}{0.6em}
+\setlength{\topskip}{0pt}
+\setlength{\footskip}{20pt}
+\setlength{\floatsep}{1.0em}
+\setlength{\textfloatsep}{1.5em}
+\setlength{\intextsep}{1.5em}
+\setlength{\abovecaptionskip}{1em}
+\setlength{\abovedisplayskip}{1em}
+\setlength{\belowdisplayskip}{1em}
+\setlength{\itemsep}{-3pt}
+\setlength{\partopsep}{0pt}
+%-------------------------------------
+%%------------------------------------
+%%----------fill in details here-----------
+
+\makeatletter
+%%----------fill in details here-----------
+\newcommand{\@university}{Manipal University Jaipur}
+\newcommand{\@department}{Mechatronics}
+\newcommand{\@laboratory}{Mechatronics Lab}
+\newcommand{\@coursecode}{MC13**}
+\newcommand{\@colorcode}{red}
+\newcommand{\@year}{2016}
+\newcommand{\@semester}{3rd Semester}
+\ifsolution
+	\title{Question Bank (Solutions)}
+\else
+	\title{Question Bank}
+\fi
+\author{Dr.~author~name}
+%=========================================%
+\date{\today}
+\newcommand{\theuniversity}{\@university}
+\newcommand{\thedepartment}{\@department}
+\newcommand{\thelaboratory}{\@laboratory}
+\newcommand{\thecoursecode}{\@coursecode}
+\newcommand{\thetitle}{\@title}
+\newcommand{\theauthor}{\@author}
+\newcommand{\thecolor}{\@colorcode}
+\newcommand{\theyear}{\@year}
+\newcommand{\thesemester}{\@semester}
+\renewcommand{\@chapapp}{}
+\makeatother
+%%------------------------------------
+%--------header-footer format---------
+\fancyfoot{} %to remove defaut
+\fancyfoot[LE,RO]{\thepage}
+%-------header footer for lab manual---------
+\fancyhead[RE]{}
+\fancyhead[LE]{Experiment \thechapter}
+\fancyhead[LO]{}
+\fancyhead[RO]{\nouppercase{\leftmark}}
+\cfoot[\thedepartment \ Engineering]{\thelaboratory \ - \thecoursecode}
+
+%%-------------OtherOptions-------------
+%\cfoot{Mechatronics Engineering}{}
+%\lfoot[LH-even]{LH-odd}
+%\cfoot{\thepage}
+%\lfoot{\thesection} %for section number
+%\lfoot{Department of Mechatronics Engineering} %for fixed text
+%\rfoot{Page \thepage\ of \pageref{LastPage}}
+%\rfoot{\thepage\ of \pageref{LastPage}}
+%\rfoot{\thepage}
+%-------------------------------
+
+%-------formatting page strips-----------
+\makeatletter
+\def\headrule{{\color{\thecolor}
+  \if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+  \hrule\@height\headrulewidth\@width\headwidth\vskip2pt%
+  \color{Black}
+  \hrule\@height\footrulewidth\@width\headwidth\vskip-\headrulewidth\vskip10.2pt
+  %\hrule\@height\footrulewidth\@width\headwidth\vskip-\headrulewidth\vskip-3pt
+}}
+\def\footrule{{%
+  \if@fancyplain\let\footrulewidth\plainfootrulewidth\fi
+  \vskip-\footruleskip\vskip-\footrulewidth
+  \hrule\@height\footrulewidth\@width\headwidth\vskip2pt%
+}}
+\makeatother
+%%------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{4mm} %to set width of colored headrule
+\renewcommand{\footrulewidth}{0.6pt}
+%---------------spacing----------------
+\onehalfspacing
+%\singlespacing
+%--------------------------------------
